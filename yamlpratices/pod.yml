@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mytestpod
+  labels:
+    app: mynginxapp
+    type: front-end
+spec:
+  containers:
+  - name: nginxcontainer
+    image: nginx:latest
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mydevpod
+  labels:
+    app: mynginxapp
+    type: front-end
+spec:
+  containers:
+  - name: nginxcontainer
+    image: nginx:latest
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myprodpod
+  labels:
+    app: mynginxapp
+    type: front-end
+spec:
+  containers:
+  - name: nginxcontainer
+    image: nginx:latest
